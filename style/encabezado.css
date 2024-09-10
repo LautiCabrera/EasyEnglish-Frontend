@@ -51,19 +51,34 @@
     display: flex;
 }
 
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
 #search-input {
-    padding: 10px;
+    padding: 10px 40px 10px 20px; 
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 20rem;
     border: none;
     outline: none;
+    width: 400px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px; 
+    font-size: 18px;
+    color: #aaa;
+    pointer-events: none; 
 }
 
 #search-form button {
     padding: 10px 15px;
     margin-left: 10px;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 20rem;
     border: none;
     background-color: #fff;
     color: #0056b3;
