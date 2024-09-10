@@ -1,27 +1,27 @@
 .footer{
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
+    flex-wrap: wrap; 
     justify-content: space-between;
-    align-items: center; /* Centra verticalmente los elementos en el contenedor */
-    padding: 20px;
+    align-items: center; 
     background-color: #004AAD;
     color: #fff;
+    margin-top: auto;
 }
 
 /* Contenedor de la izquierda del footer */
 .footer-left {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Alinea el logo y el texto al centro */
-    margin-right: 20px; /* Espacio entre el logo y las líneas verticales */
-    text-align: center; /* Alinea el texto al centro */
+    align-items: center; 
+    margin-inline: 20px; 
+    text-align: center; 
 }
 
 /* Logo del footer */
 .footer-logo {
     display: flex;
     align-items: center;
-    margin-bottom: 10px; /* Espacio entre el logo y el nombre de la empresa */
+    margin-bottom: 10px; 
 }
 
 .footer-logo-img {
@@ -29,7 +29,7 @@
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
-    margin-right: 15px; /* Espacio entre el logo y el nombre */
+    margin-right: 15px;
 }
 
 /* Nombre de la empresa en el footer */
@@ -48,7 +48,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 20px; /* Espacio entre las líneas y los enlaces */
+    margin: 0 20px; 
 }
 
 .line {
@@ -108,35 +108,33 @@
 }
 
 /* Estilos responsive */
-@media (max-width: 768px) {
+@media (max-width: 868px) {
     .footer {
         flex-direction: column;
-        align-items: center; /* Alinea todos los elementos al centro */
-        text-align: center; /* Alinea el texto al centro */
+        align-items: center; 
+        text-align: center;
     }
     .footer-lines {
-        flex-direction: row; /* Cambia la dirección de las líneas para que estén en fila */
-        margin: 20px 0; /* Espacio vertical entre las líneas y los enlaces */
+        flex-direction: row;
+        margin: 20px 0;
     }
 
     .line {
-        height: 30px; /* Reduce la altura de las líneas en pantallas pequeñas */
-        margin: 0 10px; /* Ajusta el margen horizontal de las líneas */
+        height: 30px;
+        margin: 0 10px; 
     }
     .footer-left {
-        margin-right: 0; /* Elimina el margen derecho en pantallas pequeñas */
-        margin-bottom: 20px; /* Espacio adicional debajo del contenedor izquierdo */
+        margin: 20px
     }
 
     .footer-right {
         flex-direction: column;
-        align-items: center; /* Centra los enlaces de navegación */
-        width: 100%; /* Asegura que ocupe todo el ancho disponible */
-        margin-top: 20px; /* Añade margen superior para separar del contenido superior */
+        align-items: center; 
+        margin: 20px; 
     }
 
     .footer-nav {
         flex-direction: column;
-        gap: 10px; /* Ajusta el espaciado vertical entre los enlaces */
+        gap: 10px; 
     }
 }
