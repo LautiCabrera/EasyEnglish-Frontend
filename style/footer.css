@@ -1,0 +1,145 @@
+.defayltFooter{
+    margin: 0;
+}
+.footer{
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
+    justify-content: space-between;
+    align-items: center; /* Centra verticalmente los elementos en el contenedor */
+    padding: 20px;
+    background-color: #004AAD;
+    color: #fff;
+}
+
+/* Contenedor de la izquierda del footer */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinea el logo y el texto al centro */
+    margin-right: 20px; /* Espacio entre el logo y las líneas verticales */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+/* Logo del footer */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Espacio entre el logo y el nombre de la empresa */
+}
+
+.footer-logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px; /* Espacio entre el logo y el nombre */
+}
+
+/* Nombre de la empresa en el footer */
+.footer-company-name {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Derechos de autor en el footer */
+.footer-copyright {
+    font-size: 0.9em;
+}
+
+/* Estilos de las líneas verticales */
+.footer-lines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px; /* Espacio entre las líneas y los enlaces */
+}
+
+.line {
+    width: 2px;
+    height: 50px;
+    background-color: #fff;
+    margin: 0 5px;
+}
+
+/* Contenedor de la derecha del footer */
+.footer-right {
+    display: flex;
+    flex: 1; /* Permite que el contenedor de enlaces ocupe el espacio restante */
+    justify-content: center; /* Alinea los enlaces al centro */
+    align-items: center;
+}
+
+/* Navegación del footer */
+.footer-nav {
+    display: flex;
+    gap: 1.5em;
+}
+
+.footer-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 20px; /* Bordes ovalados en los enlaces */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.footer-nav a:hover {
+    background-color: #0056b3;
+    border-radius: .5rem;
+}
+
+/* Botón de inicio de sesión */
+.btn-signin {
+    font-size: 1rem;
+    font-family: 'Righteous', cursive;
+    color: #004AAD;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-left: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+    border: 1px #004AAD solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #F8F8F0;
+}
+
+.btn-signin:hover {
+    background-color: #0056b3;
+    color: #F8F8F0;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center; /* Alinea todos los elementos al centro */
+        text-align: center; /* Alinea el texto al centro */
+    }
+    .footer-lines {
+        flex-direction: row; /* Cambia la dirección de las líneas para que estén en fila */
+        margin: 20px 0; /* Espacio vertical entre las líneas y los enlaces */
+    }
+
+    .line {
+        height: 30px; /* Reduce la altura de las líneas en pantallas pequeñas */
+        margin: 0 10px; /* Ajusta el margen horizontal de las líneas */
+    }
+    .footer-left {
+        margin-right: 0; /* Elimina el margen derecho en pantallas pequeñas */
+        margin-bottom: 20px; /* Espacio adicional debajo del contenedor izquierdo */
+    }
+
+    .footer-right {
+        flex-direction: column;
+        align-items: center; /* Centra los enlaces de navegación */
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        margin-top: 20px; /* Añade margen superior para separar del contenido superior */
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        gap: 10px; /* Ajusta el espaciado vertical entre los enlaces */
+    }
+}
