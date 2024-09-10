@@ -1,6 +1,3 @@
-.defayltFooter{
-    margin: 0;
-}
 .footer{
     display: flex;
     flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
