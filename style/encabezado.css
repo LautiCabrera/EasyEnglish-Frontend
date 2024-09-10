@@ -11,6 +11,72 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
 }
 
+.header{
+    background-image: url('../assents/banner.svg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo1 h1 {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.search-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.search-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#search-form {
+    display: flex;
+}
+
+#search-input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+#search-form button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fff;
+    color: #0056b3;
+    cursor: pointer;
+}
+
+#search-form button:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+
+
 @media (max-width: 576px) {
     .card {
         margin: 3rem;
