@@ -8,4 +8,4 @@
 | Barbara Nuñez | barbara1000 |
 | Gilda Veleizan | completar |
 | Lautaro Cabrera | LautiCabrera |
-| Maia Romero | maiaroomero18 |
+| Maia Romero | maiaromero18 |
