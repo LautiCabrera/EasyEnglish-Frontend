@@ -13,13 +13,14 @@ header {
     text-align: center;
     padding: 20px 0;
 }
-header .container {
+.container {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
+    padding: 10px;
 }
-header .logo {
-    width: 75px;
+.logo {
+    width: 100px; 
     height: auto;
 }
 h1 {
@@ -64,13 +65,4 @@ main {
 .social-links img {
     width: 30px;
     height: auto;
-}
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
