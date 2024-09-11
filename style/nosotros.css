@@ -1,0 +1,36 @@
+body{
+    background-color: #F8F8F0;
+}
+header{
+    height: 100px;
+ background-color:#004AAD ;
+
+    color: #fff;
+    font-size: 2rem;
+}
+img{
+    width: 75px;
+    float: right;
+
+}
+.contenedor {
+    display: flex;
+    align-items: center; 
+}
+
+.imagen {
+    width: 150px;
+    height: auto; 
+    margin-right: 20px; 
+}
+
+.caja-texto {
+    max-width: 500px;
+    border-color: #004AAD;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 20px;
+}
+.contendor2{
+   display: flex;
+}
