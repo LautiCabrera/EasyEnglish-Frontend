@@ -1,0 +1,68 @@
+
+body {
+    background-color: #F8F8F0;
+    font-family: 'Righteous', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-image: url('../assents/fondo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+.logo {
+    width: 100px; 
+    height: auto;
+}
+h1 {
+    font-size: 2rem;
+    margin: 20px 0;
+}
+main {
+    padding: 20px;
+}
+.sections-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.left-section, .right-section {
+    width: 45%; 
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.imagen {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.caja-texto {
+    max-width: 500px;
+}
+.caja-texto p {
+    color: #333;
+    line-height: 1.6;
+}
+.social-links {
+    margin-top: 10px;
+}
+.social-links a {
+    margin-right: 10px;
+}
+
+.social-links img {
+    width: 30px;
+    height: auto;
+}
