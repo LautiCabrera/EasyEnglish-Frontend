@@ -66,3 +66,26 @@ main {
     width: 30px;
     height: auto;
 }
+
+
+
+@media only screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      padding: 0;
+    }
+  
+    .sections-container {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .left-section, .right-section {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .logo, .imagen {
+      width: 80px;
+    }
+  }
