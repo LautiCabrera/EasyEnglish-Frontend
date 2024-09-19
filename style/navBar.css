@@ -70,20 +70,25 @@
 }
 
 /* Estilos responsive */
-@media (max-width: 768px) {
+@media (max-width: 868px) {
     .navbar-menu {
-        display: none; /* Oculta el menú en pantallas pequeñas */
+        max-height: 0;
         flex-direction: column;
         width: 100%;
         background-color: #004AAD;
         position: absolute;
-        top: 60px; /* Ajusta la posición según el tamaño del logo y padding */
+        top: 60px; 
         left: 0;
-        border-radius: 20px;
+        border-radius: 30px;
+        padding: 0 20px; 
+        margin-top: 30px;
+        overflow: hidden; 
+        transition: max-height 0.5s ease-out; 
     }
 
     .navbar-menu.active {
-        display: flex; /* Muestra el menú cuando está activo */
+        max-height: 400px; 
+        padding: 20px; 
     }
 
     .navbar-menu a {
@@ -102,8 +107,6 @@
     }
 
     .navbar-toggle-icon::before {
-        content: "\2630"; /* Icono de hamburguesa */
+        content: "\2630"; 
     }
 }
-
-
