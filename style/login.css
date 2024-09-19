@@ -7,6 +7,7 @@
 }
 
 body{
+    height: 100vh;
     background-image: url(../images/bg4.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -18,7 +19,7 @@ main{
     width: 100%;
     padding: 20px;
     margin: auto;
-    margin-top: 100px;
+    padding-top: 200px;
 }
 
 .contenedor__todo{
@@ -44,7 +45,6 @@ main{
     color: white;
     transition: all 500ms;
 }
-
 
 .caja__trasera div p,
 .caja__trasera button{
@@ -130,9 +130,6 @@ main{
     outline: none;
 }
 
-
-
-
 .formulario__login{
     opacity: 1;
     display: block;
@@ -140,8 +137,6 @@ main{
 .formulario__register{
     display: none;
 }
-
-
 
 @media screen and (max-width: 850px){
 
