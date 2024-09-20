@@ -3,7 +3,7 @@
 |Nombre | Usuario |
 | - | -|
 | Alan Sena | diego-s10 |
-| Adrián De Pereyra | completar |
+| Adrián De Pereyra | AdrianDePereyra |
 | Axel Gurgone | AxelGurgone |
 | Barbara Nuñez | barbara1000 |
 | Gilda Veleizan | completar |
