@@ -1,5 +1,5 @@
 .footer {
-    background-image: linear-gradient(to top, #350b99 0%,   #1137b4 75%, #022786 100%);
+    background-image: linear-gradient(to top, #350b99 0%,   #1137b4 75%, #1d4cb9 100%);
     background-color: #004AAD;
     color: #fff;
     display: flex;
@@ -67,14 +67,33 @@
 
 .footer-nav a {
     color: #fff;
-    text-decoration: none;
+    text-decoration: underline;
     font-size: 1em;
 
+}
+.footer-nav img{
+    width: 30px;
+    height: 30px;
+}
+.footer-nav a {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    gap: 5px; 
+}
+
+.footer-nav img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px; 
 }
 
 .footer-nav a:hover {
     text-decoration: none;
-    box-shadow: 0 4px 15px #4810cc;
+    box-shadow: 0 4px 15px #fff;
 }
 
 /* Derechos de autor */
