@@ -1,6 +1,5 @@
 /* @import url(login.css); */
-@import url(nav.css);
-html, body {
+/* html, body {
     height: 100%;
     margin: 0;
 }
@@ -12,4 +11,4 @@ body{
 
 .content {
     min-height: 70vh;
-}
+} */
