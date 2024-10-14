@@ -14,12 +14,17 @@
     transition: all 0.5s ease;
 }
 nav.active{
-    background: red;
+    background: #004AAD;
     padding: 15px;
+    z-index: 1000;
 }
 nav.active .logo,
 nav.active ul li a{
-    color: red;
+    color: whitesmoke;
+}
+nav.active ul li a:hover{
+    background: whitesmoke;
+    color: #004AAD;
 }
 .logo{
     font-size: 25px;
@@ -40,15 +45,15 @@ nav.active ul li a{
     margin: 10px;
 }
 .menu li a{
-    color: antiquewhite;
+    color: #004AAD;
     text-decoration: none;
     font-weight: bold;
     transition: all 0.5s ease;
 }
 .menu li a:hover{
     padding: 5px 10px;
-    background: #fff;
-    color: #004AAD;
+    background: #004AAD;
+    color: whitesmoke;
     border-radius: 15px;
 }
 .scrol{
