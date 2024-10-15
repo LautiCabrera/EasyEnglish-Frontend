@@ -26,10 +26,12 @@ nav.active ul li a:hover{
     background: whitesmoke;
     color: #004AAD;
 }
+/* color y diseño del boton de logeo */
 nav.active .btn-snin:hover{
     background: whitesmoke;
     color: #004AAD;
 }
+/* fin de boton de logeo */
 .logo{
     font-size: 25px;
     color: #000;
