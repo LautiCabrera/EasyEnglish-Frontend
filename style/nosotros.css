@@ -26,7 +26,15 @@ h2 {
     max-width: 200px; 
     height: auto;
     object-fit: contain;
+    cursor: pointer;
+    /* efecto */
+    transition: transform 0.3s ease;
 }
+/* efctos de logo */
+.logo:hover{
+    transform: scale(1.1);
+}
+/* efctos de logo */
 h1 {
     font-size: 2rem;
     margin: 20px 0;
