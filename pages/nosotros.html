@@ -165,6 +165,22 @@
         </div>
     </main>
     <script src="../script/importaciones/load-navbar.js"></script>
+    <!-- Modal -->
+<div class="perfil">
+    <img id="perfil" src="../assets/fotos/Axel.png" alt="Axel Gurgone" onclick="openModal('imagen1.jpg', 'Información de contacto 1')">
+    <img id="perfil" src="../assets/fotos/Axel.png" alt="Axel Gurgone" onclick="openModal('')">
+    <img id="perfil" src="../assets/fotos/Axel.png" alt="Axel Gurgone" onclick="openModal('')">
+    <img id="perfil" src="../assets/fotos/Axel.png" alt="Axel Gurgone" onclick="openModal('')">
+    <img id="perfil" src="../assets/fotos/Axel.png" alt="Axel Gurgone" onclick="openModal('')">
+</div>
+<div id="modal" class="modal" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-image" src="" alt="Imagen Modal">
+        <div id="modal-info"></div>
+    </div>
+</div>
+<script src="../script/logica/load-cards.js"></script>
 </body>
 
 </html>
