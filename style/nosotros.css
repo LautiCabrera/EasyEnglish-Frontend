@@ -193,3 +193,8 @@ box-shadow: 0px 4px 15px rgba(255, 185, 33, 0.507);
     text-decoration: none;
     cursor: pointer;
 }
+
+/* Ocultador */
+#hidden{
+    display: none;
+}
