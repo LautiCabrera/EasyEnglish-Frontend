@@ -168,7 +168,7 @@
     <!-- Modal -->
 <div class="perfil">
     <li>
-        <img id="perfil" src="../assets/fotos/Axel.png" alt="Axel Gurgone" title="Axel Gurgone" onclick="openModal('imagen1.jpg', 'Información de contacto 1')">
+        <img id="perfil" src="../assets/fotos/Axel.png" alt="Axel Gurgone" title="Axel Gurgone" onclick="openModal('')">
         <div class="info">
             <strong><em><p id="nombre">Axel Gurgone</p></em></strong>
             <strong><p>FullStack Dev</p></strong>
@@ -217,13 +217,29 @@
     </div>
     </li>
 </div>
-<div id="modal" class="modal" onclick="closeModal()">
-    <div class="modal-content" onclick="event.stopPropagation()">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img id="modal-image" src="" alt="Imagen Modal">
-        <div id="modal-info"></div>
+<!-- Modal -->
+    <div class="modal-cont" id="modal-cont">
+        <div class="modal">
+            <section class="cards"> <!--Inicio de carga de card-->
+                <img src="../assets/fotos/Axel.png" alt="Axel Gurgone" class="imagen">
+                <div class="caja-texto">
+                    <div class="nombre-rol">
+                        <h2>Axel Gurgone</h2>
+                        <p class="rol">Desarrollador Backend</p>
+                    </div>
+                    <p>Estudiante Full Stack Developer en EudaciónIT.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/" target="_blank" aria-label="GitHub">
+                            <img src="../assets/recursos/github.png" alt="GitHub Logo">
+                        </a>
+                        <a href="https://www.linkedin.com/in/axelgurgone/" target="_blank" aria-label="LinkedIn">
+                            <img src="../assets/recursos/LinkedIn_icon.svg.webp" alt="LinkedIn Logo">
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
-</div>
 <script src="../script/logica/load-cards.js"></script>
 </body>
 

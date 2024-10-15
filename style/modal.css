@@ -1,0 +1,14 @@
+.modal.cont{
+
+}
+.modal{
+    display: ;
+}
+.cards{
+    width: 50%; /* Define el ancho */
+    margin: 0 auto; /* Aplica margin auto para centrar horizontalmente */
+    background-color: whitesmoke; /* Opcional, para visualizar el div */
+    padding: 20px; 
+    display: flex;
+    border-radius: 10px;
+}
