@@ -107,16 +107,45 @@ box-shadow: 0px 4px 15px rgba(255, 185, 33, 0.507);
 }
 /* Modal */
 #perfil{
-    width: 150px;
+    width: 100px;
     height: auto;
     margin-right: 20px;
     border-radius: 50%;
+    cursor: pointer;
     transition: transform 0.3s ease,
     boxshadown 0.3s ease;
 }
 #perfil:hover{
     transform: scale(1.3);
     box-shadow: 0px 4px 15px rgba(255, 185, 33, 0.507);
+}
+.perfil {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+.perfil img {
+    width: 100px; /* Ajustar el tamaño de la imagen */
+    height: auto;
+    cursor: pointer; /* Cambiar el cursor al pasar sobre la imagen */
+    border-radius: 50%; /* Hacer que las imágenes sean circulares */
+}
+
+.perfil .info {
+    text-align: center; /* Centrar el texto debajo de la imagen */
+    margin-top: 10px; /* Añadir un poco de espacio entre la imagen y el texto */
+}
+
+.perfil .info p {
+    margin: 0; /* Quitar el margen para ajustar mejor el texto */
+    font-size: 14px; /* Ajustar el tamaño de la fuente */
+    color: #333; /* Color del texto */
+}
+#nombre{
+    text-align: left;
+    font-size: 16px;
 }
 
 .modal {
