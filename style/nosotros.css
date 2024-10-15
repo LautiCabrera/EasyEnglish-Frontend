@@ -48,11 +48,14 @@ main {
     cursor: pointer;
     display: flex;
     align-items: center;
-    transition: transform 0.3 ease;
+    /* efectos */
+    transition: transform 0.3s ease,
+    boxshadow 0.3s ease;
 }
 /* efecto en procese */
 .left-section:hover, .right-section:hover{
 transform: scale(1.1);
+box-shadow: 0px 4px 15px rgba(255, 185, 33, 0.507);
 }
 /* efecto en proceso */
 .nombre-rol {
