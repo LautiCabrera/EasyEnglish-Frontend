@@ -128,21 +128,21 @@ box-shadow: 0px 4px 15px rgba(255, 185, 33, 0.507);
     padding-top: 15px;
 }
 .perfil img {
-    width: 100px; /* Ajustar el tamaño de la imagen */
+    width: 100px; 
     height: auto;
-    cursor: pointer; /* Cambiar el cursor al pasar sobre la imagen */
-    border-radius: 50%; /* Hacer que las imágenes sean circulares */
+    cursor: pointer;
+    border-radius: 50%; 
 }
 
 .perfil .info {
-    text-align: center; /* Centrar el texto debajo de la imagen */
-    margin-top: 10px; /* Añadir un poco de espacio entre la imagen y el texto */
+    text-align: center; 
+    margin-top: 10px; 
 }
 
 .perfil .info p {
-    margin: 0; /* Quitar el margen para ajustar mejor el texto */
-    font-size: 14px; /* Ajustar el tamaño de la fuente */
-    color: #333; /* Color del texto */
+    margin: 0; 
+    font-size: 14px; 
+    color: #333;
 }
 #nombre{
     text-align: left;
