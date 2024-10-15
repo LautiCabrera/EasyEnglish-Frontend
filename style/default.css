@@ -10,6 +10,9 @@ main{
     padding: 0;
 }
 body{
-    background: whitesmoke;
+    /* background: whitesmoke; */
     scroll-behavior: smooth;
+}
+body #bg{
+    /* background-image: url(../assets/recursos/bg1.jpg); */
 }

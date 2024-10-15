@@ -5,6 +5,18 @@ body {
     margin: 0;
     padding: 0;
 }
+#bg{
+    background-image: 
+        linear-gradient(to bottom, rgba(255, 165, 0, 0.7), rgba(0, 0, 255, 0.7)), 
+        url('../assets/recursos/bg1.jpg');
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
 header {
     background-image: url('../assets/recursos/banner.svg');
     background-repeat: no-repeat;

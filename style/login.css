@@ -6,8 +6,8 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body{
-    /* background-image: url(../assents/bg5.jpg); */
+#bg-snin{
+    background-image: url(../assets/recursos/bg5.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
