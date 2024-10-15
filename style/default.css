@@ -5,6 +5,10 @@
 @import url(nosotros.css);
 @import url(fonts.css);
 
+main{
+    margin: 0;
+    padding: 0;
+}
 body{
     background: whitesmoke;
     scroll-behavior: smooth;
