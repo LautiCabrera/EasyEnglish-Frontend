@@ -26,6 +26,10 @@ nav.active ul li a:hover{
     background: whitesmoke;
     color: #004AAD;
 }
+nav.active .btn-snin:hover{
+    background: whitesmoke;
+    color: #004AAD;
+}
 .logo{
     font-size: 25px;
     color: #000;
@@ -51,6 +55,22 @@ nav.active ul li a:hover{
     transition: all 0.5s ease;
 }
 .menu li a:hover{
+    padding: 5px 10px;
+    background: #004AAD;
+    color: whitesmoke;
+    border-radius: 15px;
+}
+.btn-snin{
+    padding: 5px;
+    color: #004AAD;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: small;
+    border-radius: 15px;
+    border: none;
+    transition: all 0.5s ease;
+}
+.btn-snin:hover{
     padding: 5px 10px;
     background: #004AAD;
     color: whitesmoke;

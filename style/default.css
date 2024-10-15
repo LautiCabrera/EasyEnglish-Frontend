@@ -4,3 +4,7 @@
 @import url(login.css);
 @import url(nosotros.css);
 @import url(fonts.css);
+
+body{
+    background: whitesmoke;
+}
