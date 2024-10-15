@@ -23,9 +23,11 @@ h2 {
     gap: 10px;
     padding: 10px;
 }
-div a{
+/* soluciiona problema de logo de karuna */
+#logo{
     display: flex;
 }
+/* soluciiona problema de logo de karuna */
 .logo {
     max-width: 200px; 
     height: auto;
@@ -95,7 +97,7 @@ box-shadow: 0px 4px 15px rgba(255, 185, 33, 0.507);
     margin-top: 10px;
 }
 .social-links a {
-    margin-right: 10px;
+    /* margin-right: 10px; */
     text-decoration: none;
 }
 
