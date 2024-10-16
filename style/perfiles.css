@@ -25,12 +25,10 @@
     cursor: pointer;
     border-radius: 50%; 
 }
-
 .perfil .info {
     text-align: center; 
     margin-top: 10px; 
 }
-
 .perfil .info p {
     margin: 0; 
     font-size: 14px; 

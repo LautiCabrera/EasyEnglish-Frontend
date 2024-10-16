@@ -24,3 +24,36 @@ background: whitesmoke;
     display: flex;
     box-shadow: 0 2px 4px rgba(243, 139, 41, 0.384);
 }
+/* Estetica de las cards */
+.nombre-rol {
+    margin-bottom: 10px; 
+}
+.rol {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px; 
+}
+.imagen {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.caja-texto {
+    max-width: 500px;
+}
+.caja-texto p {
+    color: #333;
+    line-height: 1.6;
+}
+.social-links {
+    margin-top: 10px;
+}
+.social-links a {
+    /* margin-right: 10px; */
+    text-decoration: none;
+}
+.social-links img {
+    width: 30px;
+    height: auto;
+}
