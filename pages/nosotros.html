@@ -166,9 +166,9 @@
     </main>
     <script src="../script/importaciones/load-navbar.js"></script>
     <!-- Modal -->
-<div class="perfil">
-    <li>
-        <img id="perfil" src="../assets/fotos/Axel.png" alt="Axel Gurgone" title="Axel Gurgone" onclick="openModal('')">
+<div class="perfil"> <!-- EMPIEZAN LOS PERFILES -->
+    <li id="open">
+        <img id="perfil" src="../assets/fotos/Axel.png" alt="Axel Gurgone" title="Axel Gurgone" >
         <div class="info">
             <strong><em><p id="nombre">Axel Gurgone</p></em></strong>
             <strong><p>FullStack Dev</p></strong>
@@ -218,28 +218,28 @@
     </li>
 </div>
 <!-- Modal -->
-    <div class="modal-cont" id="modal-cont">
-        <div class="modal">
-            <section class="cards"> <!--Inicio de carga de card-->
-                <img src="../assets/fotos/Axel.png" alt="Axel Gurgone" class="imagen">
-                <div class="caja-texto">
-                    <div class="nombre-rol">
-                        <h2>Axel Gurgone</h2>
-                        <p class="rol">Desarrollador Backend</p>
-                    </div>
-                    <p>Estudiante Full Stack Developer en EudaciónIT.</p>
-                    <div class="social-links">
-                        <a href="https://github.com/" target="_blank" aria-label="GitHub">
-                            <img src="../assets/recursos/github.png" alt="GitHub Logo">
-                        </a>
-                        <a href="https://www.linkedin.com/in/axelgurgone/" target="_blank" aria-label="LinkedIn">
-                            <img src="../assets/recursos/LinkedIn_icon.svg.webp" alt="LinkedIn Logo">
-                        </a>
-                    </div>
+    <div class="modal-con" id="modal-con">
+        <div class="modal"> <!--Inicio de carga de card-->
+            <img src="../assets/fotos/Axel.png" alt="Axel Gurgone" class="imagen">
+            <div class="caja-texto">
+                <div class="nombre-rol">
+                    <h2>Axel Gurgone</h2>
+                    <p class="rol">Desarrollador Backend</p>
                 </div>
-            </section>
+                <p>Estudiante Full Stack Developer en EudaciónIT.</p>
+                <div class="social-links">
+                    <a href="https://github.com/" target="_blank" aria-label="GitHub">
+                        <img src="../assets/recursos/github.png" alt="GitHub Logo">
+                    </a>
+                    <a href="https://www.linkedin.com/in/axelgurgone/" target="_blank" aria-label="LinkedIn">
+                        <img src="../assets/recursos/LinkedIn_icon.svg.webp" alt="LinkedIn Logo">
+                    </a>
+                    <button id="close">cerrar</button>
+                </div>
+            </div>
         </div>
     </div>
+
 <script src="../script/logica/load-cards.js"></script>
 </body>
 
