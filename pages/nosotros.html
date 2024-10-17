@@ -9,11 +9,23 @@
 </head>
 
 <body id="bg">
-    <div id="navbar"></div> <!--CARGA DE NAVBAR-->
-    <header><!--TITULOS-->
-        <h1>Nosotros</h1>
-    </header>
-    <main>     
+    <nav id="nav-nos">
+        <div class="left-links">
+            <ul class="menu-nos">
+                <li><a href="#" class="nav-link">Nosotros</a></li>
+                <li><a href="#" class="nav-link">El Proyecto</a></li>
+            </ul>
+        </div>
+        <div class="center-title">Nosotros</div>
+        <div class="right-links">
+            <ul class="menu-nos">
+                <li><a href="#" class="nav-link">Nuestros Desafios</a></li>
+                <li><a href="#" class="nav-link">Hipervínculo 4</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main2">     
     <div id="logo" class="container"> <!-- Logos de Empresas -->
         <a href="https://www.pescar.org.ar/" id="logo" target="_blank"><img src="../assets/recursos/logo-pescar.png" alt="Fundacion Pescar" class="logo"></a>
         <a href="https://www.valtech.com/es-ar/" id="logo" target="_blank"><img src="../assets/recursos/logo-valtech.png" alt="Valtech" class="logo"></a>
@@ -24,21 +36,21 @@
     <div class="full-stack" id="delta1"><!--Perfiles FullStack-->
         <h2 class="title">FullStack Team</h2>
             <li class="delta1" id="open"> <!--Axel-->
-                <img id="perfil" src="../assets/fotos/Axel.png" alt="Axel Gurgone" title="Axel Gurgone" >
+                <img class="perfil-s" id="perfil" src="../assets/fotos/Axel.png" alt="Axel Gurgone" title="Axel Gurgone" >
                 <div class="info">
                     <strong><em><p id="nombre">Axel Gurgone</p></em></strong>
                     <strong><p>FullStack Dev</p></strong>
                 </div>
             </li>
             <li class="delta2" id="open3"> <!--Adrian-->
-                <img id="perfil" src="../assets/fotos/Adrian2.png" alt="Adrian Pereira" title="Adrian Pereira">
+                <img class="perfil-s" id="perfil" src="../assets/fotos/Adrian2.png" alt="Adrian Pereira" title="Adrian Pereira">
                 <div class="info">
                     <strong><em><p id="nombre">Adrian Pereira</p></em></strong>
                     <strong><p>FullStack Dev</p></strong>
                 </div>
             </li>
             <li class="delta3" id="open6"> <!--Lautaro-->
-            <img id="perfil" src="../assets/fotos/Lautaro2.png" alt="Lautaro Cabrera" title="Lautaro Cabrera">
+            <img class="perfil-s" id="perfil" src="../assets/fotos/Lautaro2.png" alt="Lautaro Cabrera" title="Lautaro Cabrera">
             <div class="info">
                 <strong><em><p id="nombre">Lautaro Cabrera</p></em></strong>
                 <strong><p>FullStack Dev</p></strong>
@@ -46,16 +58,16 @@
         </li>
     </div>
     <div class="back-end" id="delta2"><!--Perfiles BackEnd-->
-        <h2 class="title2">Backend Team</h2>
+        <h2 class="title2">BackEnd Team</h2>
         <li class="marg" id="open5"> <!--Gilda-->
-            <img id="perfil" src="../assets/fotos/Gilda2.png" alt="Gilda Veleizán" title="Gilda Veleizán">
+            <img class="perfil-s2" id="perfil" src="../assets/fotos/Gilda2.png" alt="Gilda Veleizán" title="Gilda Veleizán">
             <div class="info">
                 <strong><em><p id="nombre">Gilda Veleizán</p></em></strong>
                 <strong><p>FullStack Dev</p></strong>
             </div>
             </li>
             <li class="marg" id="open7"> <!--Maia-->
-            <img id="perfil" src="../assets/fotos/fotoCv-Maia2.jpg" alt="Maia Romero" title="Maia Romero">
+            <img class="perfil-s2" id="perfil" src="../assets/fotos/fotoCv-Maia2.jpg" alt="Maia Romero" title="Maia Romero">
             <div class="info">
                 <strong><em><p id="nombre">Maia Romero</p></em></strong>
                 <strong><p>FullStack Dev</p></strong>
@@ -63,16 +75,16 @@
             </li>
     </div>
     <div class="front-end" id="delta3"><!--Perfiles FrontEnd-->
-        <h2 class="title2">FrontEnd Team</h2>
+        <h2 class="title3">FrontEnd Team</h2>
         <li class="marg" id="open2"> <!--Alan-->
-            <img id="perfil" src="../assets/fotos/Alan2.png" alt="Alan Sena" title="Alan Sena">
+            <img class="perfil-s3" id="perfil" src="../assets/fotos/Alan2.png" alt="Alan Sena" title="Alan Sena">
             <div class="info">
                 <strong><em><p id="nombre">Alan Sena</p></em></strong>
                 <strong><p>FullStack Dev</p></strong>
             </div>
             </li>
             <li class="marg" id="open4"> <!--Barbara-->
-            <img id="perfil" src="../assets/fotos/Barbara2.png" alt="Barbara Nuñes" title="Barbara Nuñes">
+            <img class="perfil-s3" id="perfil" src="../assets/fotos/Barbara2.png" alt="Barbara Nuñes" title="Barbara Nuñes">
             <div class="info">
                 <strong><em><p id="nombre">Barbara Nuñes</p></em></strong>
                 <strong><p>FullStack Dev</p></strong>
@@ -238,8 +250,8 @@
             </div>
     </div>
     <!-- scripts -->
-<script src="../script/importaciones/load-navbar.js"></script>
 <script src="../script/logica/load-cards.js"></script>
+<script src="../script/logica/nav-bar-nos.js"></script>
 </body>
 
 </html>
