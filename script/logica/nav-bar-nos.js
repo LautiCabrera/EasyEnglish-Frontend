@@ -9,3 +9,9 @@ link.addEventListener('click', function(event) {
     title.textContent = this.textContent; 
 });
 });
+
+
+const nav = document.querySelector('.nav-nos');
+window.addEventListener('scroll', function(){
+    nav.classList.toggle("active2", window.scrollY >0)
+})
