@@ -65,3 +65,26 @@ close6.addEventListener('click', () => {
 close7.addEventListener('click', () => {
     modal_con7.classList.remove('show')
 });
+
+// open close sin X
+// cerrar con click
+function closeModalOnClick(event) {
+    if (event.target.classList.contains('modal-con')) {
+        event.target.classList.remove('show');
+    }
+}
+
+// Cerrar con click
+window.addEventListener('click', closeModalOnClick);
+
+// Cerrar con ESC
+window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        const modals = [modal_con, modal_con2, modal_con3, modal_con4, modal_con5, modal_con6, modal_con7];
+        modals.forEach(modal => {
+            if (modal.classList.contains('show')) {
+                modal.classList.remove('show');
+            }
+        });
+    }
+});

@@ -1,6 +1,8 @@
 .modal-con{
     display: flex;
-    background-color: rgba(219, 198, 198, 0.555); /* Opcional, para visualizar el div */
+    background: linear-gradient(90deg, rgba(220, 220, 220, 0.8), rgba(169, 169, 169, 0.8), rgba(105, 105, 105, 0.8), rgba(211, 211, 211, 0.8));
+    animation: infinityBackground 15s ease infinite;
+    background-size: 200% 200%; /* Opcional, para visualizar el div */
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -24,6 +26,7 @@ background: whitesmoke;
     border-radius: 10px;
     display: flex;
     box-shadow: 0 2px 4px rgba(243, 139, 41, 0.384);
+    position: relative; /*maneja boton de cerrado*/
 }
 /* Estetica de las cards */
 .nombre-rol {
@@ -57,4 +60,19 @@ background: whitesmoke;
 .social-links img {
     width: 30px;
     height: auto;
+}
+.btn-cls {
+    position: absolute; /* Posiciona el botón de cerrar */
+    top: 10px; /* Espaciado desde la parte superior */
+    right: 10px; /* Espaciado desde la derecha */
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    font-size: 24px; /* Tamaño del texto */
+    color: rgba(192, 192, 192, 1); /* Color gris claro */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: color 0.3s; /* Transición suave para el cambio de color */
+}
+
+.btn-cls:hover {
+    color: rgba(169, 169, 169, 1); /* Color gris oscuro al pasar el mouse */
 }
