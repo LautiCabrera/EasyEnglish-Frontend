@@ -33,9 +33,16 @@ nav.active2:hover{
 }
 .menu-nos li a {
     color: white;
+    text-shadow: 2px 2px 4px BLACK;
     font-size: large;
     text-decoration: none;
     margin: 0 30px;
+}
+.menu-nos li .a2{
+    text-shadow: 2px 2px 4px black;
+}
+.menu-nos li .a0{
+    text-shadow: 2px 2px 4px wheat;
 }
 .menu-nos li a:hover{
     padding: 5px 10px;
