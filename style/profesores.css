@@ -1,0 +1,61 @@
+body {
+    font-family: 'Righteous', cursive;
+    background: linear-gradient(135deg, #F8F8F0 25%, #3468D9 25%, #3468D9 50%, #F8F8F0 50%, #F8F8F0 75%, #3468D9 75%);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+.forum-container {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    width: 300px;
+    z-index: 1000;
+}
+.card {
+    margin: 15px;
+    border: 1px solid #3468D9;
+    border-radius: 8px;
+}
+.card-header {
+    background-color: #3468D9;
+    color: white;
+}
+.card-body {
+    text-align: center;
+}
+.btn-primary {
+    background-color: #3468D9;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #285bb5;
+}
+.container {
+    position: relative;
+    margin-top: 50px;
+}
+.forum-container {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    width: 300px;
+    z-index: 1;
+}
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
