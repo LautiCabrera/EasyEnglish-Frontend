@@ -1,0 +1,140 @@
+.footer{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center; 
+    background-color: #004AAD;
+    color: #fff;
+    margin-top: auto;
+}
+
+/* Contenedor de la izquierda del footer */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-inline: 20px; 
+    text-align: center; 
+}
+
+/* Logo del footer */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; 
+}
+
+.footer-logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+/* Nombre de la empresa en el footer */
+.footer-company-name {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Derechos de autor en el footer */
+.footer-copyright {
+    font-size: 0.9em;
+}
+
+/* Estilos de las líneas verticales */
+.footer-lines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px; 
+}
+
+.line {
+    width: 2px;
+    height: 50px;
+    background-color: #fff;
+    margin: 0 5px;
+}
+
+/* Contenedor de la derecha del footer */
+.footer-right {
+    display: flex;
+    flex: 1; /* Permite que el contenedor de enlaces ocupe el espacio restante */
+    justify-content: center; /* Alinea los enlaces al centro */
+    align-items: center;
+}
+
+/* Navegación del footer */
+.footer-nav {
+    display: flex;
+    gap: 1.5em;
+}
+
+.footer-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 20px; /* Bordes ovalados en los enlaces */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.footer-nav a:hover {
+    background-color: #0056b3;
+    border-radius: .5rem;
+}
+
+/* Botón de inicio de sesión */
+.btn-signin {
+    font-size: 1rem;
+    font-family: 'Righteous', cursive;
+    color: #004AAD;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-left: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+    border: 1px #004AAD solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #F8F8F0;
+}
+
+.btn-signin:hover {
+    background-color: #0056b3;
+    color: #F8F8F0;
+}
+
+/* Estilos responsive */
+@media (max-width: 868px) {
+    .footer {
+        flex-direction: column;
+        align-items: center; 
+        text-align: center;
+    }
+    .footer-lines {
+        flex-direction: row;
+        margin: 20px 0;
+    }
+
+    .line {
+        height: 30px;
+        margin: 0 10px; 
+    }
+    .footer-left {
+        margin: 20px
+    }
+
+    .footer-right {
+        flex-direction: column;
+        align-items: center; 
+        margin: 20px; 
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        gap: 10px; 
+    }
+}
