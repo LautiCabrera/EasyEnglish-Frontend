@@ -1,0 +1,91 @@
+#nav-nos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* background: linear-gradient(to right, orange, blue); */
+    position: fixed;
+    top: 0; 
+    width: 100%; 
+    z-index: 1000;
+}
+/* Aplica efecto keyframes */
+nav.active2{
+    background: linear-gradient(90deg, #ff7f50a9, #1e8fffa9, #ffa600a9, #6494eda9);
+    background-size: 200% 200%;
+    animation: infinityBackground 15s ease infinite;
+    padding: 15px;
+    z-index: 1000;
+}
+nav.active2:hover{
+    background: linear-gradient(90deg, #ff7f50e3, #1e8fffe3, #ffa600e3, #6494ede3);
+    background-size: 200% 200%;
+    animation: infinityBackground 15s ease infinite;
+}
+.menu-nos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-nos li {
+    list-style: none;
+    margin: 10px;
+}
+.menu-nos li a {
+    color: white;
+    text-shadow: 2px 2px 4px BLACK;
+    font-size: large;
+    text-decoration: none;
+    margin: 0 30px;
+}
+.menu-nos li .a2{
+    text-shadow: 2px 2px 4px black;
+}
+.menu-nos li .a0{
+    text-shadow: 2px 2px 4px wheat;
+}
+.menu-nos li a:hover{
+    padding: 5px 10px;
+    background: linear-gradient(to right, #0000ff, #ff8c00);
+    color: whitesmoke;
+    border-radius: 15px;
+}
+.menu-nos li .a2:hover{
+    padding: 5px 10px;
+    background: #004AAD;
+    color: whitesmoke;
+    border-radius: 15px;
+}
+.center-title {
+    color: white;
+    font-size: 3rem;
+    margin: 0 30px;
+}
+
+
+body {
+    margin: 0;
+    padding-top: 100px;
+}
+
+/* KeyF */
+@keyframes infinityBackground {
+    0% {
+    background-position: 0% 50%;
+    }
+    50% {
+    background-position: 100% 50%;
+    }
+    100% {
+    background-position: 0% 50%;
+    }
+}
+
+/* Titulos */
+nav.active2 .center-title{
+    background: linear-gradient(90deg, #c0c0c0, #e0e0e0, #f5f5f5, #a9a9a9);
+    background-size: 200% 200%;
+    -webkit-background-clip: text; /* Para que el fondo se aplique al texto */
+    -webkit-text-fill-color: transparent; /* Para hacer que el texto sea transparente */
+    animation: infinityBackground 15s ease infinite;
+}

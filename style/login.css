@@ -6,9 +6,8 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body{
-    height: 100vh;
-    background-image: url(../images/bg4.jpg);
+#bg-snin{
+    background-image: url(../assets/recursos/bg5.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -19,7 +18,7 @@ main{
     width: 100%;
     padding: 20px;
     margin: auto;
-    padding-top: 200px;
+    margin-top: 100px;
 }
 
 .contenedor__todo{
@@ -45,6 +44,7 @@ main{
     color: white;
     transition: all 500ms;
 }
+
 
 .caja__trasera div p,
 .caja__trasera button{
@@ -130,6 +130,9 @@ main{
     outline: none;
 }
 
+
+
+
 .formulario__login{
     opacity: 1;
     display: block;
@@ -137,6 +140,8 @@ main{
 .formulario__register{
     display: none;
 }
+
+
 
 @media screen and (max-width: 850px){
 

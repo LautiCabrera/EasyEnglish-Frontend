@@ -1,11 +1,28 @@
+
 body {
     background-color: #F8F8F0;
     font-family: 'Righteous', Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
-header {
-    background-image: url('../assets/banner.svg');
+#main2{
+    margin: 0;
+    padding-top: 55px;
+}
+#bg{
+    background-image: 
+        linear-gradient(to right, rgba(255, 165, 0, 0.7), rgba(0, 0, 255, 0.7)), 
+        url('../assets/recursos/bg2.png');
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+header { /*fuera de uso por el momento, eliminar si no se ocupa*/
+    background-image: url('../assets/recursos/banner.svg');
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
@@ -22,81 +39,108 @@ h2 {
     gap: 10px;
     padding: 10px;
 }
+/* soluciiona problema de logo de karuna */
+#logo{
+    display: flex;
+}
+/* soluciiona problema de logo de karuna */
 .logo {
     max-width: 200px; 
     height: auto;
     object-fit: contain;
+    cursor: pointer;
+    /* efecto */
+    transition: transform 0.3s ease;
 }
-h1 {
-    font-size: 2rem;
-    margin: 20px 0;
+/* efctos de logo */
+.logo:hover{
+    transform: scale(1.3);
 }
-main {
-    padding: 20px;
-}
-.sections-container {
+#delta {/*Contenedor de los divs de perfiles*/
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh; /* Altura completa de la ventana */
 }
-.left-section, .right-section {
-    width: 45%; 
-    padding: 15px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
+
+#delta1, #delta2, #delta3 {/*limpia los divs para mantener los perfiles en forma triangular*/
+    width: 350px;  /* Tamaño de los divs */
+    height: 350px;
+    /* background-color: red; */
+    position: absolute;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
-.nombre-rol {
-    margin-bottom: 10px; 
-}
-.rol {
-    font-size: 1rem;
-    color: #555;
-    margin-top: 5px; 
-}
-.imagen {
-    width: 150px;
-    height: auto;
-    border-radius: 50%;
-    margin-right: 20px;
-}
-.caja-texto {
-    max-width: 500px;
-}
-.caja-texto p {
-    color: #333;
-    line-height: 1.6;
-}
-.social-links {
-    margin-top: 10px;
-}
-.social-links a {
-    margin-right: 10px;
-    text-decoration: none;
+
+  /* Posicionamiento de los divs en forma triangular */
+#delta1 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.social-links img {
-    width: 30px;
-    height: auto;
+#delta2 {
+    bottom: 1;
+    left: 0;
 }
 
-@media only screen and (max-width: 768px) {
-  
-    .sections-container {
-      flex-direction: column;
-      padding: 20px;
-    }
-  
-    .left-section, .right-section {
-      width: 98%;
-      margin-bottom: 20px;
-    }
-  
-    .logo, .imagen {
-      width: 80px;
-    }
+#delta3 {
+    bottom: 1;
+    right: 0;
+}
 
-  }
+/*Mantiene los perfiles Full Stack en pocision triangular*/
+.delta1, .delta2, .delta3 {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+.delta1 {
+    /* bottom: 0; */
+    /* left: 0; */
+    top: 15%;
+    right: 50%;
+    margin-right: 40px;
+}
+.delta2 {
+    /* top: 0; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    bottom: 0;
+    /* margin-inline: 20px; */
+    bottom: -5%;
+}
+.delta3 {
+    /* bottom: 0; */
+    /* right: 0; */
+    top: 15%;
+    left: 50%;
+    margin-left: 40px;
+}
+.marg{
+    margin: 20px;
+}
+.title{
+    color: rgba(150, 75, 0, 1);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+.title{
+    display: flex;
+        position: absolute;
+        top: 5%;
+}
+.title2{
+    color:rgba(0, 0, 255, 1);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+.title3{
+    color:rgba(255, 165, 0, 1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+.title2, .title3{
+    display: flex;
+    position: absolute;
+    top: 10%;
+}
