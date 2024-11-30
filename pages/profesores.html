@@ -16,7 +16,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="../index.html">Home</a>
+                    <a class="nav-link" href="../index.html">Inicio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Profesores</a>
@@ -64,6 +64,21 @@
                             <label for="courseDescription">Descripción</label>
                             <textarea class="form-control" id="courseDescription" required></textarea>
                         </div>
+                        <div class="form-group">
+                            <label for="Price">Precio</label>
+                            <input type="string" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mod-cursado">Modalidad de cursado</label>
+                            <select id="mod-cursado" name="modalidad">
+                                <option value="sincronica">Sincrónica</option>
+                                <option value="asincronica">Asincrónica</option>
+                              </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="imagen">Cargar imagen de portada:</label>
+                            <input type="file" id="imagen" name="imagen" accept="image/*">
+                        </div>
                         <button type="submit" class="btn btn-primary">Crear Curso</button>
                     </form>
                 </div>
@@ -91,6 +106,22 @@
                             <label for="editCourseDescription">Descripción</label>
                             <textarea class="form-control" id="editCourseDescription" required></textarea>
                         </div>
+                        <div class="form-group">
+                            <label for="Price">Precio</label>
+                            <input type="string" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                        <label for="mod-cursado">Modalidad de cursado</label>
+                        <select id="editCourseModal" name="modalidad">
+                            <option value="sincronica">Sincrónica</option>
+                            <option value="asincronica">Asincrónica</option>
+                          </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="imagen">Cargar imagen de portada:</label>
+                        <input type="file" id="editImage" name="imagen" accept="image/*">
+                    </div>
+
                         <button type="submit" class="btn btn-primary">Guardar Cambios</button>
                     </form>
                 </div>
