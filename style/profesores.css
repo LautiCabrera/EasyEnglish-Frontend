@@ -48,6 +48,63 @@ body {
     width: 300px;
     z-index: 1;
 }
+/* Variables de colores */
+:root {
+    --color-primario: #007BFF;
+    --color-secundario: #6C757D;
+    --color-fondo: #F8F9FA;
+    --color-texto: #212529;
+    --color-hover: #0056b3; /* Un tono más oscuro para hover */
+}
+
+/* Colores de fondo */
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+.navbar a.nav-link {
+    color: white;
+}
+
+.navbar a.nav-link:hover {
+    color: var(--color-hover);
+}
+
+/* Botones */
+.btn-primary {
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-hover);
+    border-color: var(--color-hover);
+}
+
+/* Tarjetas */
+.card {
+    background-color: white;
+    border: 1px solid var(--color-secundario);
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    color: var(--color-primario);
+}
+
+.card-text {
+    color: var(--color-secundario);
+}
+
 @keyframes gradientAnimation {
     0% {
         background-position: 0% 50%;
