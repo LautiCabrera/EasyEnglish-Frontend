@@ -16,9 +16,6 @@ body{
     /* background: whitesmoke; */
     scroll-behavior: smooth;
 }
-body #bg{
-    /* background-image: url(../assets/recursos/bg1.jpg); */
-}
 
 .content {
     min-height: 70vh;

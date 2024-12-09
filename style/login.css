@@ -45,7 +45,6 @@ main{
     transition: all 500ms;
 }
 
-
 .caja__trasera div p,
 .caja__trasera button{
     margin-top: 30px;
@@ -118,6 +117,16 @@ main{
     outline: none;
 }
 
+.contenedor__login-register form select{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #F2F2F2;
+    font-size: 16px;
+    outline: none;
+}
+
 .contenedor__login-register form button{
     padding: 10px 40px;
     margin-top: 40px;
@@ -130,9 +139,6 @@ main{
     outline: none;
 }
 
-
-
-
 .formulario__login{
     opacity: 1;
     display: block;
@@ -140,8 +146,6 @@ main{
 .formulario__register{
     display: none;
 }
-
-
 
 @media screen and (max-width: 850px){
 
@@ -160,7 +164,6 @@ main{
         margin: 0px;
         position: absolute;
     }
-
 
     /*Formularios*/
 

@@ -7,11 +7,17 @@
 }
 
 main{
-    margin: 0 auto;
-    max-width: 1200px;
+    padding: 130px;
     font-family: 'Lato', sans-serif;
+    background-image: url(/assets/banner.svg);
 }
 
+.card-img-top {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+    height: 200px; /* Ajusta la altura de la imagen */
+    object-fit: cover; /* Recorta la imagen si es necesario */
+  }  
+  
 /* Estilos para los cursos */
 .cursos {
     display: grid;

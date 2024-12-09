@@ -6,7 +6,6 @@
 .nav{
     position: fixed;
     width: 100%;
-    /* background: #004AAD; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -31,6 +30,26 @@ nav.active .btn-snin:hover{
     background: whitesmoke;
     color: #004AAD;
 }
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background-color: #004AAD;
+        padding: 10px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    /* Asegúrate de que los enlaces en el menú sean visibles en pantallas pequeñas */
+    .navbar-collapse .nav-link {
+        color: whitesmoke;
+        padding: 10px;
+    }
+
+    .navbar-collapse .nav-link:hover {
+        background-color: whitesmoke;
+        color: #004AAD;
+        border-radius: 10px;
+    }
+}
+
 /* fin de boton de logeo */
 .logo{
     font-size: 25px;
@@ -77,6 +96,26 @@ nav.active .btn-snin:hover{
     background: #004AAD;
     color: whitesmoke;
     border-radius: 15px;
+}
+/* Botón Sign In */
+.btn-signin {
+    font-size: 1rem;
+    font-family: 'Righteous', cursive;
+    color: #004AAD;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-left: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+    border: 1px #004AAD solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #F8F8F0;
+}
+
+.btn-signin:hover {
+    background-color: #0056b3;
+    color: #F8F8F0;
 }
 .scrol{
     height: 100px;

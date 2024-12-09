@@ -3,12 +3,16 @@
     color: #fff;
     min-height: 400px;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: scale(1.05); /* Aumenta el tamaño un 5% */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn{
+    color: #fff;
 }
 
 .header{
@@ -57,15 +61,6 @@
     align-items: center;
 }
 
-#search-input {
-    padding: 10px 40px 10px 20px; 
-    font-size: 16px;
-    border-radius: 20rem;
-    border: none;
-    outline: none;
-    width: 400px;
-}
-
 .search-icon {
     position: absolute;
     left: 10px; 
@@ -89,8 +84,6 @@
     background-color: #0056b3;
     color: #fff;
 }
-
-
 
 @media (max-width: 576px) {
     .card {
