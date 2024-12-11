@@ -1,5 +1,5 @@
 // Ajustar el navbar dinámicamente
-document.addEventListener("navbarLoaded", () => {
+const navbarLoaded = () => {
   const loginButton = document.querySelector(".btn-snin");
   const links = document.querySelectorAll(".menu a");
 
@@ -20,8 +20,6 @@ document.addEventListener("navbarLoaded", () => {
       if (role != "teacher" && href.includes("profesores")) {
         if (parentLi) parentLi.style.display = "none";
       }
-
-      // Agrega más reglas según sea necesario para otros roles
     });
   } else {
     // Usuario no autenticado
@@ -38,20 +36,4 @@ document.addEventListener("navbarLoaded", () => {
       }
     });
   }
-});
-
-// Ajustar el navbar dinámicamente
-document.addEventListener("navbarLoaded", () => {
-  const loginButton = document.querySelector(".btn-snin");
-  const links = document.querySelectorAll(".menu a");
-
-  if (isLoggedIn()) {
-    // Cambiar botón a "Cerrar sesión"
-    loginButton.textContent = "Cerrar Sesión";
-    loginButton.onclick = logout;
-  } else {
-    // Usuario no autenticado
-    loginButton.textContent = "Conectarse";
-    loginButton.onclick = () => (location.href = "../pages/login.html");
-  }
-});
+};
