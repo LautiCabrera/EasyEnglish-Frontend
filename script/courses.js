@@ -1,32 +1,18 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  // Obtener el token del localStorage
-  const token = localStorage.getItem("token");
-
-  // Verificar si el token existe antes de hacer la solicitud
-  if (!token) {
-    alert("No estás autenticado. Inicia sesión.");
-    return;
-  }
-
-  // Función para cargar y mostrar los cursos
   async function loadCourses() {
     try {
-      // Hacer la solicitud GET al endpoint /courses, pasando el token en el encabezado Authorization
       const response = await fetch(`${CONFIG.API_BASE_URL}/courses`, {
-        method: "GET", // Método de la solicitud
+        method: "GET",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`, // Agregar el token aquí
         },
       });
 
-      // Verificar si la respuesta es correcta
       if (!response.ok) {
         throw new Error("No se pudo obtener la lista de cursos");
       }
 
-      const courses = await response.json(); // Convertir la respuesta en formato JSON
-
+      const courses = await response.json();
       const coursesListDiv = document.getElementById("courses-list");
 
       if (courses.length === 0) {
@@ -34,31 +20,36 @@ document.addEventListener("DOMContentLoaded", async () => {
         return;
       }
 
-      // Limpiar el contenedor antes de agregar nuevos cursos
       coursesListDiv.innerHTML = "";
 
-      // Definir una imagen común para todas las tarjetas
       const defaultImage =
         "https://blog.facialix.com/wp-content/uploads/2024/06/curso-ingles-gratuito-peliculas.jpg";
 
-      // Recorrer los cursos y mostrarlos
       courses.forEach((course) => {
         const courseElement = document.createElement("div");
-        courseElement.classList.add("col");
+
+        courseElement.classList.add("col-12", "col-sm-6", "col-md-4");
 
         courseElement.innerHTML = `
-            <div class="card h-100">
-        <img src="${defaultImage}" class="card-img-top" alt="${course.name}">
-        <div class="card-body d-flex flex-column">
-          <h2 class="card-title fs-5">${course.name}</h2>
-          <p class="precio text-primary fw-bold">$${course.price}</p>
-          <button class="btn btn-primary mt-auto">Añadir al carrito</button>
-        </div>
-      </div>
-          `;
-
-        // Agregar el curso al contenedor de cursos
+          <div class="card h-100">
+            <img src="${defaultImage}" class="card-img-top" alt="${course.name}">
+            <div class="card-body d-flex flex-column">
+              <h2 class="card-title fs-6 text-truncate">${course.name}</h2>
+              <p class="text-justify-custom mt-2">${course.description}</p>
+              <p class="text-muted small">Instructor: ${course.owner.name} ${course.owner.surname}</p>
+              <p class="precio text-primary fw-bold">$${course.price}</p>
+              <button class="btn btn-primary mt-auto btn-add-to-cart">
+                Añadir al carrito
+              </button>
+            </div>
+          </div>
+        `;
         coursesListDiv.appendChild(courseElement);
+
+        const addButton = courseElement.querySelector(".btn-add-to-cart");
+        addButton.addEventListener("click", () => {
+          addToCart(course.name);
+        });
       });
     } catch (error) {
       console.error("Error al cargar los cursos:", error);
@@ -67,11 +58,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
-  // Llamar a la función para cargar los cursos
   loadCourses();
 });
 
-// Función para agregar un curso al carrito (opcional)
-function addToCart(courseId) {
-  console.log(`Curso ${courseId} agregado al carrito.`);
+// Función para agregar un curso al carrito
+function addToCart(courseName) {
+  showModal(`Curso ${courseName} agregado al carrito.`);
 }

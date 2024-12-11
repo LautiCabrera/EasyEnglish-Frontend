@@ -26,5 +26,5 @@ function getUserRole() {
 // Cerrar sesión
 function logout() {
   localStorage.removeItem("token");
-  location.href = "/";
+  location.href = "./";
 }

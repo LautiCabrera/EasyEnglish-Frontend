@@ -25,7 +25,7 @@ document
 
       const data = await response.json();
       alert(data.message);
-      window.location.href = "/components/login.html";
+      window.location.href = "/pages/login.html";
     } catch (err) {
       console.error("Error:", err.message);
       alert(`Error: ${err.message}`);

@@ -1,39 +1,47 @@
-// Verificar estado del usuario al cargar la página
-document.addEventListener("DOMContentLoaded", () => {
-  const navMenu = document.querySelector(".menu");
+// Ajustar el navbar dinámicamente
+document.addEventListener("navbarLoaded", () => {
   const loginButton = document.querySelector(".btn-snin");
+  const links = document.querySelectorAll(".menu a");
 
   if (isLoggedIn()) {
     // Cambiar botón a "Cerrar sesión"
     loginButton.textContent = "Cerrar Sesión";
     loginButton.onclick = logout;
 
-    const userRole = getUserRole();
+    // Obtener el rol del usuario
+    const role = getUserRole();
 
-    // Mostrar u ocultar elementos según el rol
-    if (userRole === "teacher") {
-      const cursosLink = document.querySelector(
-        'a[href="../pages/profesores.html"]'
-      );
-      const editButton = document.createElement("button");
-      editButton.textContent = "Editar Cursos";
-      editButton.className = "btn-edit";
-      editButton.onclick = () =>
-        (location.href = "../pages/editar-cursos.html");
-      cursosLink.parentElement.appendChild(editButton);
-    }
+    // Filtrar rutas según el rol
+    links.forEach((link) => {
+      const href = link.getAttribute("href");
+      const parentLi = link.closest("li");
+
+      // Ocultar "profesores.html" solo para estudiantes
+      if (role === "student" && href.includes("profesores.html")) {
+        if (parentLi) parentLi.style.display = "none";
+      }
+
+      // Agrega más reglas según sea necesario para otros roles
+    });
   } else {
-    // Redirigir al login si se intenta acceder a una página protegida
-    const restrictedPages = ["/pages/editar-cursos.html"];
-    if (restrictedPages.some((page) => location.pathname.endsWith(page))) {
-      alert("Por favor, inicia sesión para acceder a esta página.");
-      location.href = "../components/login.html";
-    }
+    // Usuario no autenticado
+    loginButton.textContent = "Conectarse";
+    loginButton.onclick = () => (location.href = "../pages/login.html");
+
+    // Ocultar solo "profesores.html"
+    links.forEach((link) => {
+      const href = link.getAttribute("href");
+      const parentLi = link.closest("li");
+
+      if (href.includes("profesores.html") && parentLi) {
+        parentLi.style.display = "none";
+      }
+    });
   }
 });
 
 // Ajustar el navbar dinámicamente
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("navbarLoaded", () => {
   const loginButton = document.querySelector(".btn-snin");
   const links = document.querySelectorAll(".menu a");
 
@@ -44,6 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     // Usuario no autenticado
     loginButton.textContent = "Conectarse";
-    loginButton.onclick = () => (location.href = "../components/login.html");
+    loginButton.onclick = () => (location.href = "../pages/login.html");
   }
 });
