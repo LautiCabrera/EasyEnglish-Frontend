@@ -17,7 +17,7 @@ document.addEventListener("navbarLoaded", () => {
       const parentLi = link.closest("li");
 
       // Ocultar "profesores.html" solo para estudiantes
-      if (role === "student" && href.includes("../pages/profesores.html")) {
+      if (role != "teacher" && href.includes("profesores")) {
         if (parentLi) parentLi.style.display = "none";
       }
 
