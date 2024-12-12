@@ -6,17 +6,33 @@
     box-sizing: border-box;
 }
 
-main{
-    padding: 130px;
-    font-family: 'Lato', sans-serif;
+body {
     background-image: url(/assets/banner.svg);
 }
 
-.card-img-top {
-    width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
-    height: 200px; /* Ajusta la altura de la imagen */
-    object-fit: cover; /* Recorta la imagen si es necesario */
-  }  
+main{
+    margin: 60px;
+    margin-top: 150px;
+    font-family: 'Lato', sans-serif;
+}
+
+.card {
+    border: 1px solid #ddd; /* Borde tenue */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  }
+  
+  .card-img-top {
+    height: 150px;
+    object-fit: cover; /* Ajusta la imagen para que no se distorsione */
+  }
+  
+  .card-body {
+    padding: 10px;
+  }
+  
+  .precio {
+    font-size: 1.2rem;
+  }
   
 /* Estilos para los cursos */
 .cursos {

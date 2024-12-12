@@ -1,111 +1,193 @@
-const courses = [];
-const forumQuestions = [];
-let currentCourseIndex = null;
-document.getElementById('courseForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const name = document.getElementById('courseName').value;
-    const maxStudents = document.getElementById('maxStudents').value;
-    const description = document.getElementById('courseDescription').value;
+// Variables globales
+let courses = [];
+let currentCourseIndex;
 
-    const newCourse = { name, maxStudents, description, students: [], posts: [] };
-    courses.push(newCourse);
-    renderCourses();
-    $('#createCourseModal').modal('hide');
-    this.reset();
-});
-function renderCourses() {
-    const container = document.getElementById('coursesContainer');
-    container.innerHTML = '';
-    courses.forEach((course, index) => {
-        const card = `
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">${course.name}</h5>
-                        <p class="card-text">${course.description}</p>
-                        <p><strong>Alumnos:</strong> ${course.students.length}/${course.maxStudents}</p>
-                        <button class="btn btn-info" onclick="viewPosts(${index})">Ver Publicaciones</button>
-                        <button class="btn btn-warning" onclick="editCourse(${index})">Modificar</button>
-                        <button class="btn btn-danger" onclick="confirmDeleteCourse(${index})">Eliminar</button>
-                    </div>
-                </div>
-            </div>`;
-        container.innerHTML += card;
-    });
-}
-function editCourse(index) {
-    currentCourseIndex = index;
-    const course = courses[index];
-    document.getElementById('editCourseName').value = course.name;
-    document.getElementById('editMaxStudents').value = course.maxStudents;
-    document.getElementById('editCourseDescription').value = course.description;
-    $('#editCourseModal').modal('show');
-}
-document.getElementById('editCourseForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const name = document.getElementById('editCourseName').value;
-    const maxStudents = document.getElementById('editMaxStudents').value;
-    const description = document.getElementById('editCourseDescription').value;
-    courses[currentCourseIndex].name = name;
-    courses[currentCourseIndex].maxStudents = maxStudents;
-    courses[currentCourseIndex].description = description;
-    renderCourses();
-    $('#editCourseModal').modal('hide');
-});
-function confirmDeleteCourse(index) {
-    if (confirm("¿Estás seguro de que deseas eliminar este curso? Esta acción no se puede deshacer.")) {
-        deleteCourse(index);
+// Función para cargar los cursos del profesor
+async function loadCourses() {
+  const token = localStorage.getItem("token");
+  if (!token) {
+    logout();
+    return;
+  }
+
+  const decodedToken = decodeToken(token);
+  const teacherId = decodedToken ? decodedToken.id : null;
+
+  if (!teacherId) {
+    console.log("No se pudo obtener el ID del profesor");
+    return;
+  }
+
+  try {
+    const response = await fetch(
+      `${CONFIG.API_BASE_URL}/courses/${teacherId}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error("Error al cargar los cursos");
     }
+
+    courses = await response.json();
+    renderCourses();
+  } catch (error) {
+    console.error("Error al cargar los cursos:", error);
+    showModal("No tienes permisos para esta vista o acción");
+  }
 }
-function deleteCourse(index) {
+
+// Función para renderizar los cursos en la tabla
+function renderCourses() {
+  const container = document.getElementById("coursesContainer");
+  container.innerHTML = "";
+
+  courses.forEach((course, index) => {
+    container.innerHTML += `
+      <tr>
+        <td>${course.name}</td>
+        <td>${course.description}</td>
+        <td>${course.maxStudents}</td>
+        <td>${course.price}</td>
+        <td>${course.students ? course.students.length : 0}</td>
+        <td>
+          <button class="btn btn-warning btn-sm" onclick="editCourse(${index})">Editar</button>
+          <button class="btn btn-danger btn-sm" onclick="confirmDeleteCourse(${index})">Eliminar</button>
+        </td>
+      </tr>`;
+  });
+}
+
+// Función para crear un nuevo curso
+document
+  .getElementById("courseForm")
+  .addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("courseName").value;
+    const maxStudents = document.getElementById("maxStudents").value;
+    const description = document.getElementById("courseDescription").value;
+    const price = document.getElementById("coursePrice").value;
+
+    const newCourse = { name, maxStudents, description, price };
+
+    try {
+      const token = localStorage.getItem("token");
+      const response = await fetch(`${CONFIG.API_BASE_URL}/courses`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(newCourse),
+      });
+
+      if (!response.ok) {
+        throw new Error("Error al crear el curso");
+      }
+
+      const createdCourse = await response.json();
+      courses.push(createdCourse);
+      renderCourses();
+      $("#createCourseModal").modal("hide");
+      this.reset();
+    } catch (error) {
+      console.error("Error al crear el curso:", error);
+      showModal("No tienes permisos para esta vista o acción");
+    }
+  });
+
+// Función para editar un curso
+function editCourse(index) {
+  currentCourseIndex = index;
+  const course = courses[index];
+  document.getElementById("editCourseName").value = course.name;
+  document.getElementById("editMaxStudents").value = course.maxStudents;
+  document.getElementById("editCourseDescription").value = course.description;
+  document.getElementById("editCoursePrice").value = course.price;
+  $("#editCourseModal").modal("show");
+}
+
+document
+  .getElementById("editCourseForm")
+  .addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("editCourseName").value;
+    const maxStudents = document.getElementById("editMaxStudents").value;
+    const description = document.getElementById("editCourseDescription").value;
+    const price = document.getElementById("editCoursePrice").value;
+
+    const updatedCourse = {
+      ...courses[currentCourseIndex],
+      name,
+      maxStudents,
+      description,
+      price,
+    };
+
+    try {
+      const token = localStorage.getItem("token");
+      const response = await fetch(
+        `${CONFIG.API_BASE_URL}/courses/${updatedCourse._id}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(updatedCourse),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Error al editar el curso");
+      }
+
+      courses[currentCourseIndex] = updatedCourse;
+      renderCourses();
+      $("#editCourseModal").modal("hide");
+    } catch (error) {
+      console.error("Error al editar el curso:", error);
+      showModal("No tienes permisos para esta vista o acción");
+    }
+  });
+
+// Función para eliminar un curso
+function confirmDeleteCourse(index) {
+  if (confirm("¿Estás seguro de que deseas eliminar este curso?")) {
+    deleteCourse(index);
+  }
+}
+
+async function deleteCourse(index) {
+  const courseId = courses[index]._id;
+
+  try {
+    const token = localStorage.getItem("token");
+    const response = await fetch(`${CONFIG.API_BASE_URL}/courses/${courseId}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error("Error al eliminar el curso");
+    }
+
     courses.splice(index, 1);
     renderCourses();
+  } catch (error) {
+    console.error("Error al eliminar el curso:", error);
+    showModal("No tienes permisos para esta vista o acción");
+  }
 }
-document.getElementById('postForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const title = document.getElementById('postTitle').value;
-    const description = document.getElementById('postDescription').value;
-    const content = document.getElementById('postContent').value;
-    const media = document.getElementById('postMedia').value;
 
-    const newPost = { title, description, content, media };
-    courses[currentCourseIndex].posts.push(newPost);
-    renderPosts(currentCourseIndex);
-    $('#createPostModal').modal('hide');
-    this.reset();
-});
-function viewPosts(courseIndex) {
-    currentCourseIndex = courseIndex;
-    renderPosts(courseIndex);
-    $('#postsModal').modal('show');
-}
-function renderPosts(courseIndex) {
-    const container = document.getElementById('postsContainerModal');
-    const posts = courses[courseIndex].posts;
-    container.innerHTML = '';
-    posts.forEach((post) => {
-        container.innerHTML += `
-            <div>
-                <h5>${post.title}</h5>
-                <p>${post.description}</p>
-                <p>${post.content}</p>
-                ${post.media ? `<p><a href="${post.media}" target="_blank">Ver media</a></p>` : ''}
-            </div>`;
-    });
-}
-document.getElementById('forumForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const question = document.getElementById('forumQuestion').value;
-
-    forumQuestions.push({ question });
-    renderForum();
-    $('#createForumModal').modal('hide');
-    this.reset();
-});
-function renderForum() {
-    const forumContainer = document.getElementById('forumContainer');
-    forumContainer.innerHTML = '';
-    forumQuestions.forEach((q, index) => {
-        forumContainer.innerHTML += `<p><strong>Pregunta ${index + 1}:</strong> ${q.question}</p>`;
-    });
-}
+// Cargar los cursos al cargar la página
+document.addEventListener("DOMContentLoaded", loadCourses);

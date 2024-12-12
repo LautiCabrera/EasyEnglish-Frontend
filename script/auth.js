@@ -20,11 +20,11 @@ function getUserRole() {
   if (!token) return null;
 
   const decoded = decodeToken(token);
-  return decoded ? decoded.role : null;
+  return decoded ? decoded.role.toLowerCase() : null;
 }
 
 // Cerrar sesión
 function logout() {
   localStorage.removeItem("token");
-  location.href = "/";
+  location.href = "./";
 }

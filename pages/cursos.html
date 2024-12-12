@@ -13,14 +13,18 @@
     <link rel="stylesheet" href="../style/nav.css">
     <link rel="stylesheet" href="../style/footer.css">
     <link rel="stylesheet" href="../style/cursos.css">
+    <link rel="stylesheet" href="../style/modal.css">
     <link rel="shortcut icon" href="assets/logo1.jpg" type="image/x-icon">
 </head>
 
 <body>
     <div id="navbar"></div>
     <main>
-        <h1 class="text-center mb-4">Cusos destacados</h1>
-        <div id="courses-list"></div>
+        <h1 class="text-center mb-5" style="color: whitesmoke; font-family: 'Righteous', cursive;">Cusos destacados
+        </h1>
+        <div class="container my-4">
+            <div id="courses-list" class="row g-3"></div>
+        </div>
         <nav class="mt-4">
             <ul class="pagination justify-content-center">
                 <li class="page-item">
@@ -44,7 +48,19 @@
 
     <div id="footer"></div>
 
+    <!-- Modal -->
+    <div id="modal" style="display: none;">
+        <div id="modal-content">
+            <p id="modal-message"></p>
+            <button id="close-modal">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="../script/auth.js"></script>
+    <script src="../script/navbar.js"></script>
+    <script src="../script/load-navbar.js"></script>
     <script src="../script/config.js"></script>
+    <script src="../script/modal.js"></script>
     <script src="../script/courses.js"></script>
     <script src="../script/load-navbar.js"></script>
     <script src="../script/load-footer.js"></script>
