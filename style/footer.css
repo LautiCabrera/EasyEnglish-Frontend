@@ -1,85 +1,122 @@
-.footer {
-    background-image: linear-gradient(to top, #350b99 0%,   #1137b4 75%, #1d4cb9 100%);
-    background-color: #004AAD;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+:root {
+    --primary-color: #004AAD;
+    --text-color-light: #fff;
+    --text-color-muted: #ddd;
+    --icon-size: 40px;
+    --icon-spacing: 1.5rem;
 }
 
-/* Logo y nombre de la compañía */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    padding: 2rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .footer-left {
     display: flex;
-    flex-direction: column;
-    align-items: left;
+    align-items: center;
+    gap: 1rem;
 }
 
 .footer-logo img {
     width: 90px;
     height: auto;
-    justify-content: left ;
-}
-
-.footer-company-name {
-    font-size: 1.2em;
-    font-weight: bold;
+    object-fit: contain;
 }
 
 .footer-center {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     text-align: center;
 }
 
 .footer-center h2 {
-    font-size: 1em;
-    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 1rem;
 }
 
 .redes-sociales {
     display: flex;
-    gap: 20px;
     justify-content: center;
-
+    align-items: center;
+    gap: var(--icon-spacing);
 }
 
 .redes-sociales a {
     display: inline-block;
-    transition: transform 0.3s, box-shadow 0.3s;
-    justify-content: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 50%;
+    padding: 0.25rem;
 }
 
 .redes-sociales img {
-    width: 40px;
-    height: 40px;
+    width: var(--icon-size);
+    height: var(--icon-size);
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .redes-sociales a:hover {
     transform: scale(1.2);
-    box-shadow: 0 4px 15px #3c08b6;
-}
-/* Derechos de autor */
-.footer-copyright {
-    width: 100%;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9em;
-    color: #ddd;
+    box-shadow: 0 4px 15px var(--primary-color);
 }
 
-/* Estilos para dispositivos móviles */
+.footer-right {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.footer-right a {
+    color: var(--text-color-light);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-right a:hover {
+    color: var(--text-color-muted);
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 1.25rem;
+    font-size: 0.9rem;
+    color: var(--text-color-muted);
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .footer {
+    .footer-container {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
     }
 
-    .footer-nav {
-        margin-top: 20px;
+    .footer-left {
+        margin-bottom: 1rem;
+    }
+
+    .footer-center {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .footer-right {
         flex-direction: column;
+        align-items: center;
+        font-size: 0.85rem;
+    }
+
+    .footer-copyright {
+        margin-top: 1rem;
     }
 }

@@ -1,16 +1,3 @@
-.card {
-    background-color: #0056b3;
-    color: #fff;
-    min-height: 400px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
 .btn{
     color: #fff;
 }
@@ -89,4 +76,230 @@
     .card {
         margin: 3rem;
     }
+}
+
+/* Estilo base para el contenedor de la carta */
+.card {
+    background-color: #0056b3;
+    color: #fff;
+    min-height: 400px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px(0, 0, 0, 0.3);
+}
+
+/* Estilo de la carta en sí */
+.flip-card {
+    width: 300px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transition: transform 1.5s;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+/* La cara frontal de la carta */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para la parte de atrás */
+.card-back {
+    transform: rotateY(180deg);
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Al hacer clic o hover, la carta se voltea */
+.flip-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Diseño para el botón y el texto */
+.btn {
+    padding: 20px;
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
+}
+
+.fs-2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.fs-1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/**/
+.easy-english-benefits {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.easy-english-benefits h2 {
+    font-size: 28px;
+    color: #007BFF;
+    margin-bottom: 30px;
+}
+
+.benefit-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.benefit-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(50% - 20px); 
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.benefit-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.benefit-card p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .benefit-card {
+        width: calc(100% - 20px); /
+    }
+}
+
+@media (max-width: 480px) {
+    .easy-english-benefits h2 {
+        font-size: 24px;
+    }
+
+    .benefit-card h3 {
+        font-size: 18px;
+    }
+
+    .benefit-card p {
+        font-size: 12px;
+    }
+}
+
+
+.metrics {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.metric-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.metric {
+    background: #fff;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.metric h3 {
+    color: #007BFF;
+    font-size: 24px;
+    margin: 0;
+}
+
+.metric p {
+    color: #444;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.guarantee {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #e6f7ff;
+}
+
+.guarantee-content {
+    max-width: 500px;
+    text-align: left;
+    padding: 20px;
+}
+
+.guarantee-content h2 {
+    color: #007BFF;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.guarantee-content p {
+    color: #444;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.guarantee-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.guarantee-content li {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.guarantee-image {
+    max-width: 300px;
+    text-align: center;
+}
+
+.guarantee-image img {
+    max-width: 100%;
+    border-radius: 110%;
 }
